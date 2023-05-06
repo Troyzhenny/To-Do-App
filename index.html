@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="imagetoolbar" content="no">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ba4ff8b1de.js" crossorigin="anonymous"></script>
+    <title>Basic To-Do App</title>
+</head>
+<body>
+    <main class="container">
+
+        <div class="app-el">
+            <!-- This area holds the text input box to create a task, and also holds the logo -->
+            <div class="top">
+                <div class="logo-div">
+                    <img src="./images/sticker.png" alt="Icon" width="50px">
+                </div>
+                <div class="inputs">  
+                    <input class="textbox" name="text" id="task-input-box" type="text" placeholder="🧽🫧 Clean bathroom...">
+                    <i class="add-btn fa-solid fa-circle-plus" id="add-btn"></i>
+                </div>
+            </div>
+
+            <!-- This area holds the task cards -->
+            <div class="task-shelf">
+                
+                <!-- Temp Card 1 -->
+                <div class="card" id="task-card">
+                    <div class="checkbox-cont">
+                        <div class="empty-checkbox" id="empty-checkbox">
+                            <i class="fa-solid fa-circle-check" id="circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="task-cont">
+                        <div class="task-inner-card" id="task-inner-card"></div>
+                    </div>
+                    <div class="del">
+                        <i class="fa-solid fa-xmark" id="fa-xmark"></i>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Notifications -->
+            <div class="notifications">
+                <div class="err-msg" id="err-msg"></div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>

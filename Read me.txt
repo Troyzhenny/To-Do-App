@@ -1,0 +1,1 @@
+This a basic to-do app made with html, css, and javascript. there are zero dependencies.
