@@ -6,7 +6,7 @@ const checkIcon = document.getElementById("circle-check");
 const checkBox = document.getElementById("empty-checkbox");
 const addTask = document.getElementById("add-btn");
 const errorMsg = document.getElementById("err-msg");
-
+const taskShelf = document.getElementById("task-shelf");
 
 inputValidation = () => {
     if (taskInputBox.value === "") {
@@ -34,6 +34,13 @@ sendTask = () => {
 addTask.onclick = () => {
     inputValidation();
     sendTask();
+    if (taskInputBox.value !== "") {
+        const newDiv = document.createElement("div");
+        const newTask = document.createElement("li");
+        newTask.innerText = taskInputBox.value;
+        newDiv.appendChild(newTask);
+        taskShelf.appendChild(newDiv);
+      }
 };
 
 checkBox.onclick = () => {
@@ -55,3 +62,4 @@ deleteBtn.onclick = () => {
         taskCard.style.display = "none"
     }
 };
+
